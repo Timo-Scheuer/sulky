@@ -245,6 +245,7 @@ subprojects {
 	publishing {
 		publications {
 			maven(MavenPublication) {
+				artifactId = project.archivesBaseName
 				from components.java
 				artifact sourceJar
 				artifact javadocJar

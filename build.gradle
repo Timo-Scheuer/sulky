@@ -104,9 +104,9 @@ gradle.taskGraph.whenReady { taskGraph ->
 }
 
 if(!System.properties.'release' && !System.properties.'prerelease') {
-	defaultTasks 'build', 'uploadPublished'
+	defaultTasks 'build', 'publish'
 } else {
-	defaultTasks 'build', 'uploadPublished', 'signJavadocZip', 'signSourceZip'
+	defaultTasks 'build', 'publish', 'signJavadocZip', 'signSourceZip'
 }
 
 allprojects {
@@ -190,7 +190,7 @@ subprojects {
 			csv.required = false
 		}
 	}
-	defaultTasks 'build', 'uploadPublished'
+	defaultTasks 'build', 'publish'
 
 	sourceCompatibility = globalSourceCompatibility
 	targetCompatibility = globalTargetCompatibility

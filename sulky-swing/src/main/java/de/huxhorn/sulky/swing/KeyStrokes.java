@@ -36,6 +36,7 @@ package de.huxhorn.sulky.swing;
 
 import java.awt.AWTKeyStroke;
 import java.awt.HeadlessException;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import javax.swing.Action;
 import javax.swing.ActionMap;
@@ -69,7 +70,7 @@ public final class KeyStrokes
 		String keyMaskString = "control";
 		try
 		{
-			int keyMask = java.awt.event.InputEvent.CTRL_DOWN_MASK;
+			int keyMask = Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx();
 			keyMaskString = AWTKeyStroke.getAWTKeyStroke(KeyEvent.VK_A, keyMask).toString();
 			keyMaskString = keyMaskString.substring(0, keyMaskString.length()-" pressed A".length());
 			if(LOGGER.isDebugEnabled()) LOGGER.debug("Resolved system-dependent command modifiers '{}'.", keyMaskString);

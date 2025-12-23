@@ -11,7 +11,7 @@ project.ext.libraries = [
 'byte-buddy':             "net.bytebuddy:byte-buddy:${versions.bytebuddy}",
 'commons-codec':          'commons-codec:commons-codec:1.15',
 'commons-io':             'commons-io:commons-io:2.11.0',
-'easymock':               'org.easymock:easymock:3.6',
+'easymock':               'org.easymock:easymock:5.2.0',
 'groovy':                 "org.apache.groovy:groovy:${versions.groovy}",
 'jcl-over-slf4j':         "org.slf4j:jcl-over-slf4j:${versions.slf4j}",
 'jlayer':                 'de.huxhorn.sulky:de.huxhorn.sulky.3rdparty.jlayer:1.0',
